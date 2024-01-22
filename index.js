@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/descargar-archivo", (req, res) => {
-  const archivoPath = path.join(__dirname, "archivos", "ejemplo.txt");
+  const archivoPath = path.join(__dirname, "archivos", "app-debug.apk");
 
   if (!fs.existsSync(archivoPath)) {
     return res.status(404).send("Archivo no encontrado");
