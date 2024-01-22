@@ -19,7 +19,7 @@ app.get("/descargar-archivo", (req, res) => {
 
   const mimeType = mime.lookup(archivoPath);
 
-  res.setHeader("Content-disposition", "attachment; filename=ejemplo.txt");
+  res.setHeader("Content-disposition", "attachment; filename=app-debug.apk");
   res.setHeader("Content-type", mimeType);
 
   const archivoStream = fs.createReadStream(archivoPath);
